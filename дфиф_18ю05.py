@@ -14,11 +14,13 @@ class OddIterator:
         self.index += 2
         return value
 l = []
+l2 = []
 N = 7
 for i in range(1, N + 1):
     l.append(i)
 for n in OddIterator(l):
-    print(n)
+    l2.append(n)
+print(l2)
 
 #2
 
@@ -45,7 +47,7 @@ print(l1)
 #3
 
 lst = l
-
+l3 = []
 class ListIterator:
     def __init__(self, lst):
         self.lst = lst
@@ -59,7 +61,8 @@ class ListIterator:
         self.index += 1
         return value
 for num in ListIterator(lst):
-    print(num)
+    l3.append(num)
+print(l3)
 
 #4
 
