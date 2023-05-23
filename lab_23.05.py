@@ -39,14 +39,25 @@ logging.basicConfig(level=logging.INFO,
                     filename= 'ex2.log',
                     filemode= 'w',
                     format='%(asctime)s - %(levelname)s - %(message)s')
+logging.debug('debug')
+logging.info('info')
+logging.warning('warming')
+logging.error('error')
+logging.critical('critical')
 a = input('Введіть текст: ')
 class log_:
     def __init__(self):
         self.logger = logging.getLogger('Log_')
         self.logger.setLevel(logging.DEBUG)
     def text(self, a):
+        if 'bad_words' in a:
+            raise ValueError('У тексті присутні заборонені слова')
         self.logger.info(f'{a}')
+        print('Текст був доданий до txt-файлу')
 l = log_()
 l.text(a)
 
 #3
+
+
+
